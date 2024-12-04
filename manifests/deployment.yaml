@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tan-dara2643-zip-test-spring-deployment
+  labels:
+    app: tan-dara2643-zip-test-spring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tan-dara2643-zip-test-spring
+  template:
+    metadata:
+      labels:
+        app: tan-dara2643-zip-test-spring
+    spec:
+      containers:
+        - name: tan-dara2643-zip-test-spring-container
+          image: pipejet/tan-dara2643-zip-test-spring:latest
+          ports:
+            - containerPort: 8080
