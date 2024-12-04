@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: tan-dara2643-zip-test-spring-certificate
+  namespace: tan-dara2643-zip-test-spring
+spec:
+  secretName: tan-dara2643-zip-test-spring-secret-tls
+  commonName: tan-dara2643-zip-test-spring.assessify.org
+  dnsNames:
+  - tan-dara2643-zip-test-spring.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
